@@ -20,7 +20,8 @@ function Home() {
 			topics: ["Cancer"],
       clinician: {
 				name: "Dr. Lisa Miller",
-        role: "Oncologist at City Medical Center"
+        role: "Oncologist at City Medical Center",
+				id: 1,
 			},
 		},
 		{
@@ -30,7 +31,8 @@ function Home() {
 			topics: ["Cancer"],
       clinician: {
 				name: "Dr. Robert Davis",
-        role: "Cardiologist at Heart Health Clinic"
+        role: "Cardiologist at Heart Health Clinic",
+				id: 2,
 			},
 		},
 		{
@@ -41,7 +43,8 @@ function Home() {
 			topics: ["Dentistry"],
       clinician: {
 				name: "James Johnson",
-        role: "Admin staff at XYZ Children's Hospital"
+        role: "Admin staff at XYZ Children's Hospital",
+				id: 3,
 			},
 		},
 		{
@@ -51,7 +54,8 @@ function Home() {
 			topics: ["Patient Care"],
       clinician: {
 				name: "James Johnson",
-        role: "Admin staff at XYZ Children's Hospital"
+        role: "Admin staff at XYZ Children's Hospital",
+				id: 4,
 			},
 		},
 		{
@@ -61,6 +65,7 @@ function Home() {
 			clinician: {
 				name: "Dr. John Smith",
 				role: "Clinician at XX Hospital",
+				id: 5,
 			},
 		},
 		{
@@ -70,6 +75,7 @@ function Home() {
 			clinician: {
 				name: "Dr. Emily Johnson",
 				role: "Surgeon at YY Hospital",
+				id: 6,
 			},
 		},
 		{
@@ -79,6 +85,7 @@ function Home() {
 			clinician: {
 				name: "Dr. Emily Johnson",
 				role: "Surgeon at YY Hospital",
+				id: 7,
 			},
 		},
 		{
@@ -88,6 +95,7 @@ function Home() {
 			clinician: {
 				name: "Dr. Michael Davis",
 				role: "Pharmacist at ZZ Clinic",
+				id: 8,
 			},
 		},
 		{
@@ -97,6 +105,7 @@ function Home() {
 			clinician: {
 				name: "Dr. Sarah Wilson",
 				role: "Research Scientist at ABC Research Institute",
+				id: 9,
 			},
 		},
 	];
@@ -122,7 +131,7 @@ function Home() {
 							key={index}
 							title={item.title}
 							description={item.description}
-							postOwner={item.clinician || {}}
+							postOwner={item.clinician}
 						/>
 					</Grid>
 				))}

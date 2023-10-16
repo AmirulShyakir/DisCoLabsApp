@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
+import Avatar from '@mui/material/Avatar';
 import { CardActionArea } from '@mui/material';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
@@ -38,8 +39,14 @@ export default function PostCard({ title, description, postOwner }) {
               {description}
               <br />
               <br />
-              {postOwner.name}
             </Typography>
+            <div style={{display: "flex", gap: "10px"}}>
+              <Avatar alt="Remy Sharp" src={`https://i.pravatar.cc/300?img=${postOwner.id}`} />
+              <div>
+                <p>{postOwner.name}</p>
+                <p>{postOwner.role}</p>
+              </div>
+            </div>
           </CardContent>
         </CardActionArea>
       </Card>
