@@ -96,7 +96,7 @@ function Home() {
 		},
 		{
 			title:
-				"Using Machine Learning to diagnose X-ray scans for dentistry applications",
+				"Using Machine Learning for dentistry applications",
 			description:
 				"I want to use ML to diagnose x ray scans. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet purus gravida quis blandit turpis cursus in. Id aliquet risus feugiat in ante metus dictum at tempor. Bibendum at varius vel pharetra vel. Pretium viverra suspendisse potenti nullam ac tortor vitae. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Vel pharetra vel turpis nunc",
 			topics: ["Dentistry"],
@@ -158,7 +158,7 @@ function Home() {
 		},
 		{
 			title: "Dentistry Research",
-			description: "I want to conduct research in the field of dentistry.",
+			description: "I want to conduct research in the field of dentistry. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet purus gravida quis blandit turpis cursus in. Id aliquet risus feugiat in ante metus dictum at tempor. Bibendum at varius vel pharetra vel. Pretium viverra suspendisse potenti nullam ac tortor vitae. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Vel pharetra vel turpis nunc",
 			topics: ["Dentistry"],
 			clinician: {
 				name: "Dr. John Smith",
@@ -188,7 +188,7 @@ function Home() {
 		},
 		{
 			title: "Pediatric Medicine Studies",
-			description: "I want to explore pediatric medicine and its advancements.",
+			description: "I want to explore pediatric medicine and its advancements. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet purus gravida quis blandit turpis cursus in. Id aliquet risus feugiat in ante metus dictum at tempor. Bibendum at varius vel pharetra vel. Pretium viverra suspendisse potenti nullam ac tortor vitae. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Vel pharetra vel turpis nunc",
 			topics: ["Pediatric"],
 			clinician: {
 				name: "Dr. Emily Johnson",
@@ -228,7 +228,7 @@ function Home() {
 		},
 		{
 			title: "Cancer Research",
-			description: "I want to contribute to cancer research and treatment.",
+			description: "I want to contribute to cancer research and treatment. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet purus gravida quis blandit turpis cursus in. Id aliquet risus feugiat in ante metus dictum at tempor. Bibendum at varius vel pharetra vel. Pretium viverra suspendisse potenti nullam ac tortor vitae. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Vel pharetra vel turpis nunc",
 			topics: ["Cancer"],
 			clinician: {
 				name: "Dr. Emily Johnson",
@@ -278,7 +278,7 @@ function Home() {
 		},
 		{
 			title: "Patient Care Improvement",
-			description: "I aim to enhance patient care and healthcare services.",
+			description: "I aim to enhance patient care and healthcare services. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet purus gravida quis blandit turpis cursus in. Id aliquet risus feugiat in ante metus dictum at tempor. Bibendum at varius vel pharetra vel. Pretium viverra suspendisse potenti nullam ac tortor vitae. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Vel pharetra vel turpis nunc",
 			topics: ["Patient Care"],
 			clinician: {
 				name: "Dr. Michael Davis",
@@ -308,7 +308,7 @@ function Home() {
 		},
 		{
 			title: "Cardiology Innovations",
-			description: "I want to focus on innovative solutions in cardiology.",
+			description: "I want to focus on innovative solutions in cardiology. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet purus gravida quis blandit turpis cursus in. Id aliquet risus feugiat in ante metus dictum at tempor. Bibendum at varius vel pharetra vel. Pretium viverra suspendisse potenti nullam ac tortor vitae. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Vel pharetra vel turpis nunc",
 			topics: ["Cardiology"],
 			clinician: {
 				name: "Dr. Sarah Wilson",

@@ -4,7 +4,6 @@ import Divider from '@mui/material/Divider';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import PostCard from "../components/PostCard";
 import DiscussionCard from "../components/DiscussionCard";
 
 export default function PostDetails() {
