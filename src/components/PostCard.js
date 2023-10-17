@@ -10,7 +10,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 
-export default function PostCard({ title, description, postOwner, participants }) {
+export default function PostCard({ title, description, postOwner, participants, discussion }) {
   const linkStyle = {
     textDecoration: 'none', // Remove underlines
     color: 'inherit', // Inherit the text color
@@ -27,6 +27,7 @@ export default function PostCard({ title, description, postOwner, participants }
         description: description,
         postOwner: postOwner,
         participants: participants,
+        discussion: discussion,
       }} // The state to pass
     >
     <Box sx={{ minWidth: 275 }}>

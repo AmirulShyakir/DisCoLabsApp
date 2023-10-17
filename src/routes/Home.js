@@ -35,6 +35,23 @@ function Home() {
 					id: 21,
 				},
 			],
+			discussion: [
+				{
+					posterId: 1, // Corresponds to the clinician's id
+					comment: "Exciting research topic!",
+					likes: 1,
+				},
+				{
+					posterId: 20, // Corresponds to the participant's id
+					comment: "I'm interested in this research.",
+					likes: 1,
+				},
+				{
+					posterId: 21,
+					comment: "I have experience in surgical procedures for lung cancer.",
+					likes: 2,
+				},
+			]
 		},
 		{
 			title: "Breast Cancer Research",
@@ -58,6 +75,24 @@ function Home() {
 					id: 23,
 				},
 			],
+			discussion: [
+				{
+					posterId: 2, // Corresponds to the clinician's id
+					comment: "Breast cancer is an important field of study.",
+					likes: 0,
+				},
+				{
+					posterId: 22, // Corresponds to the participant's id
+					comment: "I'm passionate about pediatric medicine.",
+					likes: 1,
+				},
+				{
+					posterId: 23,
+					comment: "I can provide insights on research methodologies.",
+					likes: 2,
+				},
+				// Add more discussion objects here
+			],
 		},
 		{
 			title:
@@ -75,6 +110,18 @@ function Home() {
 					name: "Dr. James Brown",
 					role: "Data Scientist at XYZ University",
 					id: 24,
+				},
+			],
+			discussion: [
+				{
+					posterId: 3, // Corresponds to the clinician's id
+					comment: "This is an interesting topic!",
+					likes: 0,
+				},
+				{
+					posterId: 24, // Corresponds to the participant's id
+					comment: "I have experience in this area.",
+					likes: 1,
 				},
 			],
 		},
@@ -95,6 +142,19 @@ function Home() {
 					id: 25,
 				},
 			],
+			discussion: [
+				{
+					posterId: 4, // Corresponds to the clinician's id
+					comment: "Monitoring patients with IOT devices can improve care.",
+					likes: 1,
+				},
+				{
+					posterId: 25, // Corresponds to the participant's id
+					comment: "I'm experienced in machine learning for healthcare applications.",
+					likes: 1,
+				},
+				// Add more discussion objects here
+			],
 		},
 		{
 			title: "Dentistry Research",
@@ -111,6 +171,19 @@ function Home() {
 					role: "Dentist at Bright Smiles Clinic",
 					id: 34,
 				},
+			],
+			discussion: [
+				{
+					posterId: 5, // Corresponds to the clinician's id
+					comment: "Dentistry research is essential for oral health.",
+					likes: 0,
+				},
+				{
+					posterId: 34, // Corresponds to the participant's id
+					comment: "I have experience in dental procedures and research.",
+					likes: 0,
+				},
+				// Add more discussion objects here
 			],
 		},
 		{
@@ -133,6 +206,24 @@ function Home() {
 					role: "Cardiologist at Heart Hospital",
 					id: 27,
 				},
+			],
+			discussion: [
+				{
+					posterId: 6, // Corresponds to the clinician's id
+					comment: "Pediatric medicine is a vital field for child health.",
+					likes: 1,
+				},
+				{
+					posterId: 26, // Corresponds to a participant's id
+					comment: "I have experience in cancer research for pediatric patients.",
+					likes: 2,
+				},
+				{
+					posterId: 27, // Corresponds to a participant's id
+					comment: "Cardiology insights can benefit pediatric care.",
+					likes: 0,
+				},
+				// Add more discussion objects here
 			],
 		},
 		{
@@ -161,6 +252,29 @@ function Home() {
 					id: 30,
 				},
 			],
+			discussion: [
+				{
+					posterId: 7, // Corresponds to the clinician's id
+					comment: "Cancer research is critical for patient care.",
+					likes: 0,
+				},
+				{
+					posterId: 28, // Corresponds to a participant's id
+					comment: "I specialize in neurological aspects of cancer.",
+					likes: 1,
+				},
+				{
+					posterId: 29, // Corresponds to a participant's id
+					comment: "Pharmaceutical research plays a key role in cancer treatment.",
+					likes: 0,
+				},
+				{
+					posterId: 30, // Corresponds to a participant's id
+					comment: "Bioinformatics aids in genomics research for cancer.",
+					likes: 3,
+				},
+				// Add more discussion objects here
+			],
 		},
 		{
 			title: "Patient Care Improvement",
@@ -178,6 +292,19 @@ function Home() {
 					id: 31,
 				},
 			],
+			discussion: [
+				{
+					posterId: 8, // Corresponds to the clinician's id
+					comment: "Improving patient care is crucial for better healthcare services.",
+					likes: 0,
+				},
+				{
+					posterId: 31, // Corresponds to a participant's id
+					comment: "Psychiatry can contribute to patient care enhancements.",
+					likes: 0,
+				},
+				// Add more discussion objects here
+			],
 		},
 		{
 			title: "Cardiology Innovations",
@@ -194,6 +321,19 @@ function Home() {
 					role: "Environmental Scientist at Eco Institute",
 					id: 32,
 				},
+			],
+			discussion: [
+				{
+					posterId: 9, // Corresponds to the clinician's id
+					comment: "Innovations in cardiology can save lives and improve heart health.",
+					likes: 0,
+				},
+				{
+					posterId: 32, // Corresponds to a participant's id
+					comment: "Environmental science might offer unique perspectives for cardiology.",
+					likes: 1,
+				},
+				// Add more discussion objects here
 			],
 		},
 	];
@@ -221,6 +361,7 @@ function Home() {
 							description={item.description}
 							postOwner={item.clinician}
 							participants={item.participants}
+							discussion={item.discussion}
 						/>
 					</Grid>
 				))}
