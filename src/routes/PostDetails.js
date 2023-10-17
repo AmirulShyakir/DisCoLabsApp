@@ -5,7 +5,21 @@ import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 
 export default function PostDetails() {
-  let { title, description, postOwner } = useLocation().state;
+  let { title, description, postOwner, participants } = useLocation().state;
+
+  function ParticipantsList({ participants }) {
+		return (
+				participants.map((participant, index) => (
+          <div style={{display: "flex", gap: "10px"}}>
+					  <Avatar alt={participant.name} src={`https://i.pravatar.cc/300?img=${participant.id}`} />
+            <div>
+              <p>{participant.name}</p>
+              <p>{participant.role}</p>
+          </div>
+          </div>
+				))
+		);
+	}
 
   return (
     <div style={{display: "flex"}}>
@@ -19,17 +33,15 @@ export default function PostDetails() {
       <div className="discussionMembers" style={{flex: 1}}>       
         <h2>Posted By</h2>
         <div style={{display: "flex", gap: "10px"}}>
-          <Avatar alt="Remy Sharp" src={`https://i.pravatar.cc/300?img=${postOwner.id}`} />
+          <Avatar alt={`${postOwner.name}`} src={`https://i.pravatar.cc/300?img=${postOwner.id}`} />
           <div>
             <p>{postOwner.name}</p>
             <p>{postOwner.role}</p>
           </div>
         </div>
         <h2>Participants</h2>
-        <Stack direction="row" spacing={2}>
-          <Avatar alt="Remy Sharp" src="https://i.pravatar.cc/300?img=3" />
-          <Avatar alt="Travis Howard" src="https://i.pravatar.cc/300?img=69" />
-          <Avatar alt="Cindy Baker" src="https://i.pravatar.cc/300?img=25" />
+        <Stack spacing={2}>
+          <ParticipantsList participants={participants}/>
         </Stack>
       </div>
     </div>

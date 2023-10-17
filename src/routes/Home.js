@@ -23,6 +23,18 @@ function Home() {
         role: "Oncologist at City Medical Center",
 				id: 1,
 			},
+			participants: [
+				{
+					name: "Dr. Lisa Miller",
+					role: "Oncologist at City Medical Center",
+					id: 20,
+				},
+				{
+					name: "Dr. John Smith",
+					role: "Surgeon at Central Hospital",
+					id: 21,
+				},
+			],
 		},
 		{
 			title: "Breast Cancer Research",
@@ -34,6 +46,18 @@ function Home() {
         role: "Cardiologist at Heart Health Clinic",
 				id: 2,
 			},
+			participants: [
+				{
+					name: "Dr. Emily Johnson",
+					role: "Pediatrician at Sunny Clinic",
+					id: 22,
+				},
+				{
+					name: "Dr. Sarah Wilson",
+					role: "Research Scientist at ABC Research Institute",
+					id: 23,
+				},
+			],
 		},
 		{
 			title:
@@ -46,6 +70,13 @@ function Home() {
         role: "Admin staff at XYZ Children's Hospital",
 				id: 3,
 			},
+			participants: [
+				{
+					name: "Dr. James Brown",
+					role: "Data Scientist at XYZ University",
+					id: 24,
+				},
+			],
 		},
 		{
 			title: "Using IOT devices to keep track of patients",
@@ -57,6 +88,13 @@ function Home() {
         role: "Admin staff at XYZ Children's Hospital",
 				id: 4,
 			},
+			participants: [
+				{
+					name: "Dr. Maria Garcia",
+					role: "Machine Learning Researcher at XYZ Company",
+					id: 25,
+				},
+			],
 		},
 		{
 			title: "Dentistry Research",
@@ -67,6 +105,13 @@ function Home() {
 				role: "Clinician at XX Hospital",
 				id: 5,
 			},
+			participants: [
+				{
+					name: "Dr. William Brown",
+					role: "Dentist at Bright Smiles Clinic",
+					id: 34,
+				},
+			],
 		},
 		{
 			title: "Pediatric Medicine Studies",
@@ -77,6 +122,18 @@ function Home() {
 				role: "Surgeon at YY Hospital",
 				id: 6,
 			},
+			participants: [
+				{
+					name: "Dr. Robert Lee",
+					role: "Cancer Researcher at Research Lab XYZ",
+					id: 26,
+				},
+				{
+					name: "Dr. Jennifer White",
+					role: "Cardiologist at Heart Hospital",
+					id: 27,
+				},
+			],
 		},
 		{
 			title: "Cancer Research",
@@ -87,6 +144,23 @@ function Home() {
 				role: "Surgeon at YY Hospital",
 				id: 7,
 			},
+			participants: [
+				{
+					name: "Dr. Michael Johnson",
+					role: "Neurologist at Brain Institute",
+					id: 28,
+				},
+				{
+					name: "Dr. Susan Davis",
+					role: "Pharmaceutical Researcher at XYZ Pharma",
+					id: 29,
+				},
+				{
+					name: "Dr. Richard Wilson",
+					role: "Bioinformatician at Genomics Lab",
+					id: 30,
+				},
+			],
 		},
 		{
 			title: "Patient Care Improvement",
@@ -97,6 +171,13 @@ function Home() {
 				role: "Pharmacist at ZZ Clinic",
 				id: 8,
 			},
+			participants: [
+				{
+					name: "Dr. Julia Adams",
+					role: "Psychiatrist at Mental Health Clinic",
+					id: 31,
+				},
+			],
 		},
 		{
 			title: "Cardiology Innovations",
@@ -107,6 +188,13 @@ function Home() {
 				role: "Research Scientist at ABC Research Institute",
 				id: 9,
 			},
+			participants: [
+				{
+					name: "Dr. Daniel Robinson",
+					role: "Environmental Scientist at Eco Institute",
+					id: 32,
+				},
+			],
 		},
 	];
 
@@ -132,6 +220,7 @@ function Home() {
 							title={item.title}
 							description={item.description}
 							postOwner={item.clinician}
+							participants={item.participants}
 						/>
 					</Grid>
 				))}
