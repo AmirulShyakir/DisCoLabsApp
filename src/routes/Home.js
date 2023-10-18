@@ -9,7 +9,6 @@ import PostCard from "../components/PostCard";
 
 function Home() {
 	const [selectedTopic, setSelectedTopic] = useState("All"); // State to hold the selected chip
-	const [showNewPost, setShowNewPost] = useState(true);
 
 	const handleChipPress = (topic) => {
 		console.info(`You clicked the ${topic} Chip.`);
@@ -370,23 +369,21 @@ function Home() {
   	navigate('/createPost');
 	}
 
-	function CardList({ data, showNewPost }) {
+	function CardList({ data }) {
 		return (
 			<Grid container spacing={2}>
 				{data.map((item, index) => (
 					// Use a conditional check to render the last item if showNewPost is true
-					(showNewPost || index < data.length - 1) && (
-						<Grid item xs={6} key={index}>
-							<PostCard
-								key={index}
-								title={item.title}
-								description={item.description}
-								postOwner={item.clinician}
-								participants={item.participants}
-								discussion={item.discussion}
-							/>
-						</Grid>
-					)
+					<Grid item xs={6} key={index}>
+						<PostCard
+							key={index}
+							title={item.title}
+							description={item.description}
+							postOwner={item.clinician}
+							participants={item.participants}
+							discussion={item.discussion}
+						/>
+					</Grid>
 				))}
 			</Grid>
 		);
@@ -429,7 +426,7 @@ function Home() {
 					onClick={() => handleChipPress("Patient Care")}
 				/>
 			</Stack>
-			<CardList data={filteredData} showNewPost={showNewPost} />
+			<CardList data={filteredData}/>
 		</div>
 	);
 }
