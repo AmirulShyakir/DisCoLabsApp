@@ -12,6 +12,7 @@ import TopicsJoined from "./routes/TopicsJoined";
 import Home from "./routes/Home";
 import Profile from "./routes/Profile";
 import PostDetails from "./routes/PostDetails";
+import CreatePost from "./routes/CreatePost";
 import Navbar from "./components/Navbar";
 import "./App.css";
 
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "post-details",
         element: <PostDetails />,
+      },
+      {
+        path: "createPost",
+        element: <CreatePost />,
       },
     ],
   },

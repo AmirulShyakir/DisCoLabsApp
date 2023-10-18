@@ -27,9 +27,12 @@ export default function DiscussionCard({ discussion, postOwner }) {
 				<CardContent>
 					<div style={{ display: "flex", gap: "10px" }}>
 						<Avatar
-							alt="Remy Sharp"
-							src={`https://i.pravatar.cc/300?img=${postOwner.id}`}
-						/>
+							alt={postOwner.name} 
+              src={postOwner.id === 100
+              ? "https://media.licdn.com/dms/image/C5603AQHQAtjjii2bXA/profile-displayphoto-shrink_800_800/0/1633504787029?e=1703116800&v=beta&t=1sE60Pk5zvv_JLXlAp-nEdLEx9_HZdi9J3ziCk3kQWs"
+              : `https://i.pravatar.cc/300?img=${postOwner.id}`
+              }
+            />
 						<div>
 							<p>{postOwner.name}</p>
 							<p>{postOwner.role}</p>

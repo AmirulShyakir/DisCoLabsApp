@@ -1,18 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from 'react-router-dom';
 import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Grid";
+import Button from '@mui/material/Button';
+import AddIcon from '@mui/icons-material/Add';
 import ClickableChip from "../components/ClickableChip";
 import PostCard from "../components/PostCard";
 
 function Home() {
 	const [selectedTopic, setSelectedTopic] = useState("All"); // State to hold the selected chip
+	const [showNewPost, setShowNewPost] = useState(true);
 
 	const handleChipPress = (topic) => {
 		console.info(`You clicked the ${topic} Chip.`);
 		setSelectedTopic(topic); // Update the selected chip
 	};
 
-	const data = [
+	const location = useLocation();
+	
+	const prevData = [
 		{
 			title: "Cancer Research",
 			description:
@@ -337,33 +343,50 @@ function Home() {
 			],
 		},
 	];
+	const [data, setData] = useState([...prevData]);
+
+	useEffect(() => {
+    if (location.state && location.state.newPostData) {
+			console.log("New Post Data Received:", location.state.newPostData); // Log the new post data
+      // Update the data state with the new post data
+      setData((prevData) => [...prevData, location.state.newPostData]);
+    }
+  }, [location.state]);
 
 	const filteredData =
 		selectedTopic === "All"
 			? data
 			: data.filter((item) => {
-					// Check if item.topics is an array or a single string
-					const topicsArray = Array.isArray(item.topics)
-						? item.topics
-						: [item.topics];
+		// Check if item.topics is an array or a single string
+		const topicsArray = Array.isArray(item.topics)
+			? item.topics
+			: [item.topics];
 
-					return topicsArray.includes(selectedTopic);
-			  });
+		return topicsArray.includes(selectedTopic);
+	});
 
-	function CardList({ data }) {
+	const navigate = useNavigate();
+	function navigateToCreatePost() {
+  	navigate('/createPost');
+	}
+
+	function CardList({ data, showNewPost }) {
 		return (
 			<Grid container spacing={2}>
 				{data.map((item, index) => (
-					<Grid item xs={6} key={index}>
-						<PostCard
-							key={index}
-							title={item.title}
-							description={item.description}
-							postOwner={item.clinician}
-							participants={item.participants}
-							discussion={item.discussion}
-						/>
-					</Grid>
+					// Use a conditional check to render the last item if showNewPost is true
+					(showNewPost || index < data.length - 1) && (
+						<Grid item xs={6} key={index}>
+							<PostCard
+								key={index}
+								title={item.title}
+								description={item.description}
+								postOwner={item.clinician}
+								participants={item.participants}
+								discussion={item.discussion}
+							/>
+						</Grid>
+					)
 				))}
 			</Grid>
 		);
@@ -371,7 +394,18 @@ function Home() {
 
 	return (
 		<div className="content">
-			<h1>Discover Opportunities</h1>
+			<div style={{display:"flex", flexDirection: "row", justifyContent: "space-between"}}>
+				<h1>Discover Opportunities</h1>
+				<Button
+					type="submit"
+					variant="contained"
+					style={{ width: "10%" }}
+					onClick={navigateToCreatePost}
+					startIcon={<AddIcon />}
+				>
+					New Post
+				</Button>
+			</div>
 			<Stack direction="row" spacing={1}>
 				<ClickableChip label="All" onClick={() => handleChipPress("All")} />
 				<ClickableChip
@@ -395,7 +429,7 @@ function Home() {
 					onClick={() => handleChipPress("Patient Care")}
 				/>
 			</Stack>
-			<CardList data={filteredData} />
+			<CardList data={filteredData} showNewPost={showNewPost} />
 		</div>
 	);
 }
