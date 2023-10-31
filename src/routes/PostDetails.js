@@ -76,6 +76,10 @@ export default function PostDetails() {
     setUserComment(event.target.value);
   };
   const handleCommentSubmit = () => {
+    if (userComment === "") {
+      return;
+    }
+
     // Create a new comment object
     const newComment = {
       comment: userComment,
@@ -119,7 +123,7 @@ export default function PostDetails() {
             <Button
               type="submit"
               variant="contained"
-              style={{ width: "25%" }}
+              style={{ width: "15%" }}
               onClick={handleCommentSubmit}
             >
               Comment

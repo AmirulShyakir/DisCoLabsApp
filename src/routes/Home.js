@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
 import ClickableChip from "../components/ClickableChip";
 import PostCard from "../components/PostCard";
+import NewsCard from "../components/NewsCard";
 
 function Home() {
 	const [selectedTopic, setSelectedTopic] = useState("All"); // State to hold the selected chip
@@ -344,6 +345,27 @@ function Home() {
 	];
 	const [data, setData] = useState([...prevData]);
 
+	const newsData = [
+		{
+			title: "Khoo Pilot Award",
+			description:"Singhealth Duke NUS is awarding $30000 grant for clinical and translational research projects.",
+			type: "Grant",
+			link: "https://www.singhealthdukenus.com.sg/research/grant-calendar/khoo-pilot-award-(kpa)"
+		},
+		{
+			title: "Singapore Healthcare Management 2023",
+			description: "At this Congress, thought leaders from various areas of expertise, such as healthcare management and supply chain management to share their insights and best practices.",
+			type: "Workshop",
+			link: "https://www.singaporehealthcaremanagement.sg/Pages/home.aspx"
+		},
+		{
+			title: "MOH Health Innovation Fund",
+			description: "New MHI Fund to consolidate existing MOH Innovation funding streams (RIEP, HPF) under one grant framework to better drive national health innovation initiatives and alignment of innovation agenda",
+			type: "Grant",
+			link: "https://www.singhealthdukenus.com.sg/research/grant-calendar/moh-health-innovation-(mhi)-fund"
+		},
+	];
+
 	useEffect(() => {
     if (location.state && location.state.newPostData) {
 			console.log("New Post Data Received:", location.state.newPostData); // Log the new post data
@@ -389,44 +411,67 @@ function Home() {
 		);
 	}
 
+	function NewsList({data}) {
+		return (
+			<Grid>
+				{data.map((item, index) => (
+					// Use a conditional check to render the last item if showNewPost is true
+					<Grid item xs={6} key={index}>
+						<NewsCard
+							key={index}
+							title={item.title}
+							description={item.description}
+							type={item.type}
+						/>
+					</Grid>
+				))}
+			</Grid>
+		)
+	}
+
 	return (
-		<div className="content">
-			<div style={{display:"flex", flexDirection: "row", justifyContent: "space-between"}}>
-				<h1>Discover Opportunities</h1>
-				<Button
-					type="submit"
-					variant="contained"
-					style={{ width: "10%" }}
-					onClick={navigateToCreatePost}
-					startIcon={<AddIcon />}
-				>
-					New Post
-				</Button>
+		<div style={{display: "flex"}}>
+			<div className="content" style={{flex: 4}}>
+				<div style={{display:"flex", flexDirection: "row", justifyContent: "space-between"}}>
+					<h1>Discover Opportunities</h1>
+					<Button
+						type="submit"
+						variant="contained"
+						onClick={navigateToCreatePost}
+						startIcon={<AddIcon />}
+					>
+						New Post
+					</Button>
+				</div>
+				<Stack direction="row" spacing={1}>
+					<ClickableChip label="All" onClick={() => handleChipPress("All")} />
+					<ClickableChip
+						label="Dentistry"
+						onClick={() => handleChipPress("Dentistry")}
+					/>
+					<ClickableChip
+						label="Pediatric"
+						onClick={() => handleChipPress("Pediatric")}
+					/>
+					<ClickableChip
+						label="Pediatric"
+						onClick={() => handleChipPress("Cardiology")}
+					/>
+					<ClickableChip
+						label="Cancer"
+						onClick={() => handleChipPress("Cancer")}
+					/>
+					<ClickableChip
+						label="Patient Care"
+						onClick={() => handleChipPress("Patient Care")}
+					/>
+				</Stack>
+				<CardList data={filteredData}/>
 			</div>
-			<Stack direction="row" spacing={1}>
-				<ClickableChip label="All" onClick={() => handleChipPress("All")} />
-				<ClickableChip
-					label="Dentistry"
-					onClick={() => handleChipPress("Dentistry")}
-				/>
-				<ClickableChip
-					label="Pediatric"
-					onClick={() => handleChipPress("Pediatric")}
-				/>
-				<ClickableChip
-					label="Pediatric"
-					onClick={() => handleChipPress("Cardiology")}
-				/>
-				<ClickableChip
-					label="Cancer"
-					onClick={() => handleChipPress("Cancer")}
-				/>
-				<ClickableChip
-					label="Patient Care"
-					onClick={() => handleChipPress("Patient Care")}
-				/>
-			</Stack>
-			<CardList data={filteredData}/>
+			<div className="discussionMembers" style={{flex: 1}}>
+				<h2>Latest News</h2>
+				<NewsList data={newsData}/>
+			</div>
 		</div>
 	);
 }
