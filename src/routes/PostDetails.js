@@ -6,9 +6,11 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import DiscussionCard from "../components/DiscussionCard";
 import TextField from '@mui/material/TextField';
+import IconButton from '@mui/material/IconButton';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 export default function PostDetails() {
-  let { title, description, postOwner, participants, discussion } = useLocation().state;
+  let { title, description, postOwner, participants, discussion, likes } = useLocation().state;
   const [userJoined, setUserJoined] = useState(false);
   const [allParticipants, setAllParticipants] = useState([...participants]);
   const [allDiscussion, setAllDiscussion] = useState([...discussion]);
@@ -94,13 +96,32 @@ export default function PostDetails() {
     setUserComment('');
   };
   
-  
+  const [postLikes, setPostLikes] = useState(likes);
+  const [hasLiked, setHasLiked] = useState(false);
+
+  function toggleLike() {
+    if (!hasLiked) {
+      setPostLikes(likes + 1);
+      setHasLiked(true);
+    } else {
+      setPostLikes(likes);
+      setHasLiked(false);
+    }
+  }
 
   return (
     <div style={{display: "flex"}}>
       <div className="content" style={{flex: 4}}>
         <h1>{title}</h1>
-        <h2>Overview</h2>
+        <div style={{display: "flex", justifyContent: "space-between"}}>
+          <h2>Overview</h2>
+          <div style={{display:"flex", flexDirection: "row", alignItems: "center"}}>
+            <IconButton aria-label="like post" color={hasLiked ? "primary" : "default"} onClick={toggleLike}>
+              <FavoriteIcon />
+            </IconButton>
+            <p>{postLikes} Like{postLikes > 1 ? "s" : ""}</p>
+          </div>
+        </div>
         <p>{description}</p>
         <Divider/>
 

@@ -37,6 +37,7 @@ function CreatePost() {
       },
       participants: [],
       discussion: [],
+      likes: 0,
     };
   
     console.log("New Post Data BEFORE creatingPost:", newPost); // Log the new post data

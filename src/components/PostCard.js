@@ -8,9 +8,11 @@ import { CardActionArea } from '@mui/material';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
-export default function PostCard({ title, description, postOwner, participants, discussion }) {
+export default function PostCard({ title, description, postOwner, participants, discussion, likes }) {
   const linkStyle = {
     textDecoration: 'none', // Remove underlines
     color: 'inherit', // Inherit the text color
@@ -25,19 +27,18 @@ export default function PostCard({ title, description, postOwner, participants, 
         postOwner: postOwner,
         participants: participants,
         discussion: discussion,
+        likes: likes,
       }} // The state to pass
     >
     <Box sx={{ minWidth: 275 }}>
       <Card variant="outlined">
         <CardActionArea>
           <CardContent>
-            <Typography variant="h5" component="div">
+            <Typography variant="h5" component="div" style={{ display: "-webkit-box", WebkitBoxOrient: "vertical", overflow: "hidden", WebkitLineClamp: 1, marginBottom: 10 }}>
               {title}
             </Typography>
-            <Typography variant="body2">
+            <Typography variant="body2" style={{ display: "-webkit-box", WebkitBoxOrient: "vertical", overflow: "hidden", WebkitLineClamp: 3, marginBottom: 10 }}>
               {description}
-              <br />
-              <br />
             </Typography>
             <div style={{display: "flex", gap: "10px"}}>
               <Avatar 
@@ -50,6 +51,12 @@ export default function PostCard({ title, description, postOwner, participants, 
               <div>
                 <p>{postOwner.name}</p>
                 <p>{postOwner.role}</p>
+              </div>
+              <div style={{position: "absolute", right: 15, display:"flex", flexDirection: "row", alignItems: "center"}}>
+                <IconButton aria-label="like post" color="default">
+                  <FavoriteIcon />
+                </IconButton>
+                <p>{likes} Like{likes > 1 ? "s" : ""}</p>
               </div>
             </div>
           </CardContent>

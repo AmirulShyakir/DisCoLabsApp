@@ -14,10 +14,13 @@ export default function DiscussionCard({ discussion, postOwner }) {
   const [likes, setLikes] = useState(discussion.likes);
   const [hasLiked, setHasLiked] = useState(false);
 
-  function incrementLike() {
+  function toggleLike() {
     if (!hasLiked) {
       setLikes(likes + 1);
       setHasLiked(true);
+    } else {
+      setLikes(discussion.likes);
+      setHasLiked(false);
     }
   }
 
@@ -44,21 +47,21 @@ export default function DiscussionCard({ discussion, postOwner }) {
 				<CardActions>
           
           <div style={{display:"flex", flexDirection: "row", alignItems: "center"}}>
-            <IconButton aria-label="like post" color="primary">
+            <IconButton aria-label="like post" color="default">
             <ReplyIcon/>
             </IconButton>
             <p>Reply</p>
           </div>
           
           <div style={{display:"flex", flexDirection: "row", alignItems: "center"}}>
-            <IconButton aria-label="like post" color="primary" onClick={incrementLike}>
+            <IconButton aria-label="like post" color={hasLiked ? "primary" : "default"} onClick={toggleLike}>
               <FavoriteIcon />
             </IconButton>
             <p>{likes} Like{likes > 1 ? "s" : ""}</p>
           </div>
           
           <div style={{display:"flex", flexDirection: "row", alignItems: "center"}}>
-            <IconButton aria-label="share" color="primary">
+            <IconButton aria-label="share" color="default">
               <ShareIcon />
             </IconButton>
             <p>Share</p>

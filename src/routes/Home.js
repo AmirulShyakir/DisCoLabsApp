@@ -22,7 +22,7 @@ function Home() {
 		{
 			title: "Cancer Research",
 			description:
-				"I want to research lung cancer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet purus gravida quis blandit turpis cursus in. Id aliquet risus feugiat in ante metus dictum at tempor. Bibendum at varius vel pharetra vel. Pretium viverra suspendisse potenti nullam ac tortor vitae. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Vel pharetra vel turpis nunc",
+				"I am embarking on a research endeavor focused on lung cancer. Exploring the complexities of this disease, my study aims to delve into the intricate molecular and genetic factors contributing to lung cancer development. This research seeks to uncover novel insights into the pathogenesis of lung cancer, examining potential biomarkers, treatment modalities, and preventive strategies. By scrutinizing the interplay of genetic predispositions, environmental factors, and lifestyle choices, the ultimate goal is to contribute to the advancement of targeted therapies and personalized interventions for individuals affected by lung cancer. This undertaking aligns with the broader objective of enhancing our understanding of lung cancer at a molecular level, fostering breakthroughs that can positively impact patient outcomes and pave the way for more effective medical interventions.",
 			topics: ["Cancer"],
       clinician: {
 				name: "Dr. Lisa Miller",
@@ -57,12 +57,13 @@ function Home() {
 					comment: "I have experience in surgical procedures for lung cancer.",
 					likes: 2,
 				},
-			]
+			],
+			likes: 1,
 		},
 		{
 			title: "Breast Cancer Research",
 			description:
-				"I want to research breast cancer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet purus gravida quis blandit turpis cursus in. Id aliquet risus feugiat in ante metus dictum at tempor. Bibendum at varius vel pharetra vel. Pretium viverra suspendisse potenti nullam ac tortor vitae. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Vel pharetra vel turpis nunc ",
+				"Embarking on a research initiative centered around breast cancer, my focus is on unraveling the intricacies of this prevalent disease. This study aims to delve into the genetic and molecular underpinnings of breast cancer, with a keen interest in identifying potential biomarkers, innovative treatment approaches, and preventive strategies. By examining the complex interplay between genetic factors, environmental influences, and lifestyle choices, the overarching goal is to contribute to advancements in targeted therapies and personalized interventions for individuals affected by breast cancer. This research seeks to deepen our understanding of breast cancer at a molecular level, with the ultimate aim of driving progress in medical interventions and improving patient outcomes.",
 			topics: ["Cancer"],
       clinician: {
 				name: "Dr. Robert Davis",
@@ -99,12 +100,13 @@ function Home() {
 				},
 				// Add more discussion objects here
 			],
+			likes: 4,
 		},
 		{
 			title:
 				"Using Machine Learning for dentistry applications",
 			description:
-				"I want to use ML to diagnose x ray scans. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet purus gravida quis blandit turpis cursus in. Id aliquet risus feugiat in ante metus dictum at tempor. Bibendum at varius vel pharetra vel. Pretium viverra suspendisse potenti nullam ac tortor vitae. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Vel pharetra vel turpis nunc",
+				"Exploring the transformative potential of machine learning in dentistry, this research delves into innovative applications poised to revolutionize oral healthcare. Harnessing the power of artificial intelligence, the study investigates how machine learning algorithms can enhance diagnostics, treatment planning, and patient care in the field of dentistry. From automating image analysis for early detection of oral diseases to optimizing treatment recommendations based on personalized patient data, the research aims to pave the way for more efficient, accurate, and patient-centric dental practices. By seamlessly integrating cutting-edge technology into the dental domain, this investigation seeks to unlock novel avenues for improving overall oral health outcomes and advancing the future of dentistry.",
 			topics: ["Dentistry"],
       clinician: {
 				name: "James Johnson",
@@ -130,11 +132,12 @@ function Home() {
 					likes: 1,
 				},
 			],
+			likes: 3,
 		},
 		{
 			title: "Using IOT devices to keep track of patients",
 			description:
-				"I want to keep track of patients using IOT devices. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet purus gravida quis blandit turpis cursus in. Id aliquet risus feugiat in ante metus dictum at tempor. Bibendum at varius vel pharetra vel. Pretium viverra suspendisse potenti nullam ac tortor vitae. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Vel pharetra vel turpis nunc",
+				"In this research endeavor, the focus is on pioneering the integration of Internet of Things (IoT) devices to establish a comprehensive system for continuous patient health monitoring. The study aims to explore the vast potential of IoT technologies in tracking and analyzing vital health metrics in real-time. By employing a network of connected devices, this research seeks to enhance patient care by providing healthcare professionals with immediate and accurate insights into patients' well-being. The overarching goal is to establish a robust and scalable framework that not only improves the quality of patient monitoring but also enables timely interventions, ultimately contributing to more personalized and effective healthcare strategies.",
 			topics: ["Patient Care"],
       clinician: {
 				name: "James Johnson",
@@ -161,10 +164,11 @@ function Home() {
 				},
 				// Add more discussion objects here
 			],
+			likes: 2,
 		},
 		{
-			title: "Dentistry Research",
-			description: "I want to conduct research in the field of dentistry. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet purus gravida quis blandit turpis cursus in. Id aliquet risus feugiat in ante metus dictum at tempor. Bibendum at varius vel pharetra vel. Pretium viverra suspendisse potenti nullam ac tortor vitae. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Vel pharetra vel turpis nunc",
+			title: "Advancing Oral Health Through Innovative Investigations",
+			description: "In this exploration of dentistry research, the focus is on advancing our understanding of oral health through innovative investigations. This research initiative seeks to uncover new insights into dental conditions, treatment modalities, and preventive strategies. From delving into the molecular foundations of oral diseases to evaluating the efficacy of emerging dental technologies, the goal is to contribute to the evolution of dental practices and patient care. By embracing cutting-edge methodologies and interdisciplinary approaches, this research aims to play a pivotal role in shaping the future of dentistry, driving improvements in diagnostics, treatments, and overall oral health outcomes.",
 			topics: ["Dentistry"],
 			clinician: {
 				name: "Dr. John Smith",
@@ -191,10 +195,11 @@ function Home() {
 				},
 				// Add more discussion objects here
 			],
+			likes: 0,
 		},
 		{
 			title: "Pediatric Medicine Studies",
-			description: "I want to explore pediatric medicine and its advancements. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet purus gravida quis blandit turpis cursus in. Id aliquet risus feugiat in ante metus dictum at tempor. Bibendum at varius vel pharetra vel. Pretium viverra suspendisse potenti nullam ac tortor vitae. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Vel pharetra vel turpis nunc",
+			description: "This research initiative is dedicated to Pediatric Medicine Studies, focusing on the holistic health and well-being of children. Delving into various aspects of pediatric care, the research aims to explore innovative approaches to diagnostics, treatments, and preventive measures tailored specifically for the unique needs of young patients. By examining the intersection of medical advancements and child-centric healthcare practices, this research seeks to contribute valuable insights that can shape the future of pediatric medicine. The ultimate goal is to enhance the quality of healthcare for children, ensuring they receive the best possible medical care to foster a healthy and thriving start in life.",
 			topics: ["Pediatric"],
 			clinician: {
 				name: "Dr. Emily Johnson",
@@ -231,10 +236,11 @@ function Home() {
 				},
 				// Add more discussion objects here
 			],
+			likes: 2,
 		},
 		{
 			title: "Cancer Research",
-			description: "I want to contribute to cancer research and treatment. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet purus gravida quis blandit turpis cursus in. Id aliquet risus feugiat in ante metus dictum at tempor. Bibendum at varius vel pharetra vel. Pretium viverra suspendisse potenti nullam ac tortor vitae. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Vel pharetra vel turpis nunc",
+			description: "In the expansive realm of cancer research, this initiative is committed to unraveling the complexities of the disease and inspiring transformative breakthroughs. The research encompasses a comprehensive exploration of various cancer types, with a focus on understanding the underlying mechanisms, identifying novel therapeutic targets, and advancing personalized treatment strategies. By integrating multidisciplinary approaches and leveraging cutting-edge technologies, the goal is to contribute to the ongoing efforts in cancer prevention, early detection, and innovative treatments. This research seeks to be a beacon of progress in the fight against cancer, aiming to improve patient outcomes, enhance quality of life, and ultimately contribute to the global mission of conquering this formidable disease.",
 			topics: ["Cancer"],
 			clinician: {
 				name: "Dr. Emily Johnson",
@@ -281,10 +287,11 @@ function Home() {
 				},
 				// Add more discussion objects here
 			],
+			likes: 5,
 		},
 		{
 			title: "Patient Care Improvement",
-			description: "I aim to enhance patient care and healthcare services. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet purus gravida quis blandit turpis cursus in. Id aliquet risus feugiat in ante metus dictum at tempor. Bibendum at varius vel pharetra vel. Pretium viverra suspendisse potenti nullam ac tortor vitae. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Vel pharetra vel turpis nunc",
+			description: "This initiative is dedicated to the continuous enhancement of patient care, focusing on innovative strategies to elevate healthcare experiences. The research aims to identify and implement transformative approaches that prioritize patient well-being, satisfaction, and overall quality of care. From streamlining communication channels to embracing technology-driven solutions, the goal is to foster a patient-centric healthcare environment. Through a combination of interdisciplinary collaboration, data-driven insights, and a commitment to excellence, this research seeks to contribute to the ongoing evolution of patient care, ensuring that individuals receive compassionate, efficient, and personalized healthcare services.",
 			topics: ["Patient Care"],
 			clinician: {
 				name: "Dr. Michael Davis",
@@ -311,10 +318,11 @@ function Home() {
 				},
 				// Add more discussion objects here
 			],
+			likes: 1,
 		},
 		{
 			title: "Cardiology Innovations",
-			description: "I want to focus on innovative solutions in cardiology. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet purus gravida quis blandit turpis cursus in. Id aliquet risus feugiat in ante metus dictum at tempor. Bibendum at varius vel pharetra vel. Pretium viverra suspendisse potenti nullam ac tortor vitae. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Vel pharetra vel turpis nunc",
+			description: "This research initiative is dedicated to exploring and advancing cardiology innovations, with a focus on enhancing heart health through cutting-edge investigations. The aim is to delve into novel diagnostic tools, treatment modalities, and preventive strategies for cardiovascular conditions. By integrating technological advancements, molecular insights, and clinical approaches, this research seeks to contribute to the evolution of cardiology practices. The ultimate goal is to improve patient outcomes, optimize cardiovascular care, and inspire breakthroughs that address the complex challenges associated with heart health.",
 			topics: ["Cardiology"],
 			clinician: {
 				name: "Dr. Sarah Wilson",
@@ -341,6 +349,7 @@ function Home() {
 				},
 				// Add more discussion objects here
 			],
+			likes: 0,
 		},
 	];
 	const [data, setData] = useState([...prevData]);
@@ -404,6 +413,7 @@ function Home() {
 							postOwner={item.clinician}
 							participants={item.participants}
 							discussion={item.discussion}
+							likes={item.likes}
 						/>
 					</Grid>
 				))}
